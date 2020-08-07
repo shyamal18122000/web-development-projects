@@ -4,7 +4,6 @@ all projects inside this repositry are framed by using html, css and javascript
 
 ### 1. color game project:-
 
-It contain code in html css and javascript.
+It contain a code file in which html, css and javascript is used to make the web page.
 
-After finishing the project it looks like the image given below.
-<a href="#">One</a>
+After finishing the project it looks like the image inside the floder with name img.png
