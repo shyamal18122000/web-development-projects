@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>timepass</title>
+	<script type="text/javascript" src="D:\web development bootcamp\patatap clone\paper-full.js"></script>
+	<script type="text/javascript" src="D:\web development bootcamp\patatap clone\howler.js"></script>
+	<script type="text/javascript">
+		/*//Create a Paper.js Path to draw a line into it:
+	var path = new Path();
+	// Give the stroke a color
+	path.strokeColor = 'red';
+	var start = new Point(0, 100);
+	// Move to start and draw a line from there
+	path.moveTo(start);
+	// Note the plus operator on Point objects.
+	// PaperScript does that for us, and much more!
+	path.lineTo(start + [ 500, -50 ]);
+	var circle1=new Path.Circle(new Point(50,50),30);
+	circle1.fillColor="purple";
+	for(var i=0;i<1000;i=i+100){
+		for(var j=0;j<1000;j=j+100){
+			var circle1=new Path.Circle(new Point(i,j),10);
+			circle1.fillColor="blue";}
+}*/
+	</script>
+	<script type="text/paperscript" canvas="myCanvas">
+		var sound;
+		var color;
+		var keyData={
+		a:{
+		color:"purple",
+		sound:new Howl({src:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\bubbles.mp3']})
+		},
+		w:{
+		color:"blue",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\clay.mp3']})
+		},
+		s:{
+		color:"red",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\confetti.mp3']})
+		},
+		d:{
+		color:"green",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\corona.mp3']})
+		},
+		q:{
+		color:"cyan",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\dotted-spiral.mp3']})
+		},
+		e:{
+		color:"lime",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-1.mp3']})
+		},
+		r:{
+		color:"lime",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-2.mp3']})
+		},
+		z:{
+		color:"orange",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-3.mp3']})
+		},
+		x:{
+		color:"white",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\glimmer.mp3']})
+		},
+		c:{
+		color:"blue",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\moon.mp3']})
+		},
+		v:{
+		color:"yellow",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\pinwheel.mp3']})
+		},
+		b:{
+		color:"pink",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\piston-1.mp3']})
+		},
+		f:{
+		color:"purple",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\bubbles.mp3']})
+		},
+		g:{
+		color:"blue",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\clay.mp3']})
+		},
+		h:{
+		color:"red",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\confetti.mp3']})
+		},
+		j:{
+		color:"green",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\corona.mp3']})
+		},
+		k:{
+		color:"cyan",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\dotted-spiral.mp3']})
+		},
+		l:{
+		color:"lime",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-1.mp3']})
+		},
+		t:{
+		color:"lime",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-2.mp3']})
+		},
+		y:{
+		color:"orange",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-3.mp3']})
+		},
+		u:{
+		color:"purple",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\bubbles.mp3']})
+		},
+		i:{
+		color:"blue",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\clay.mp3']})
+		},
+		o:{
+		color:"red",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\confetti.mp3']})
+		},
+		p:{
+		color:"green",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\corona.mp3']})
+		},
+		b:{
+		color:"cyan",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\dotted-spiral.mp3']})
+		},
+		n:{
+		color:"lime",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-1.mp3']})
+		},
+		m:{
+		color:"lime",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-2.mp3']})
+		},
+		v:{
+		color:"orange",
+		sound:new Howl({urls:['D:\web development bootcamp\patatap clone\Neuronal-Synchrony-master\assets\A\flash-3.mp3']})
+		}
+	};
+		var circles=[];
+		function onKeyDown(event){
+			var circle1=new Path.Circle(new Point(Math.random()*view.size.width,Math.random()*view.size.height),100);
+			circle1.fillColor=keyData[event.key].color;
+			//keyData[event.key].sound.play();
+			circles.push(circle1);
+		}
+		function onFrame(event){
+				for(var i=0;i<circles.length;i=i+1){
+					circles[i].fillColor.hue += 1;
+					circles[i].scale(.97);
+				}
+				//circle2.scale(.9);
+
+			}
+</script>
+
+<style type="text/css">
+	canvas{
+		height: 100%;
+		width: 100%;
+		background: black;
+	}
+	body{
+		margin: 0;
+	}
+</style>
+</head>
+<body>
+<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
