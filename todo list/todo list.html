@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todo list</title>
+	<link rel="stylesheet" type="text/css" href="D:\web development bootcamp\bootstrap.css">
+	<script type="text/javascript" src="D:\web development bootcamp\jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="D:\web development bootcamp\bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+	<style type="text/css">
+		h1{
+			background: #2980b9;
+			color: white;
+			margin: 0;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			font-size: 28px;
+			font-weight: normal;
+		}
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;	
+		}
+		li{
+			background:#fff; 
+			height: 40px;
+			line-height: 40px;
+			color: #666;
+		}
+		input{
+			background-color: #f7f7f7;
+			font-size: 18px;
+			padding: 13px 13px 13px 20px;
+			width:100%;
+			box-sizing: border-box;
+			color: #2980b9;
+			border: 3px solid rgba(0, 0, 0, 0);
+		}
+		input:focus{
+			background: #fff;
+			border: 3px solid #2980b9;
+			outline: none;
+		}
+		li:nth-child(2n){
+			background: #f7f7f7; 
+		}
+		body{
+			background: #3494E6;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+		#container{
+			width: 360px;
+			box-shadow: 0 0 3px rgba(0,0,0,0.1);
+			margin: 100px auto;
+			background: #f7f7f7; 
+		}
+		.completed{
+			color:gray;
+			text-decoration:line-through;
+		}
+		.fa-plus{
+			float:right;
+		}
+		span{
+			background:#e74c3c;
+			height: 40px;
+			margin-right: 20px;
+			text-align: center;
+			color: white; 
+			width: 0px;
+			display: inline-block;
+			transition: 0.2s linear;
+			opacity: 0;
+		}
+		li:hover span{
+			width: 40px;
+			opacity: 1.0;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>To-Do list<i class="fa fa-plus"></i></h1>
+		<input type="text" placeholder="Add New Todo" >
+		<ul>
+			<li><span><i class="fa fa-trash"></i></span> Meet hagrad</li>
+			<li><span><i class="fa fa-trash"></i></span> go to snakes class</li>
+			<li><span><i class="fa fa-trash"></i></span> practice quidage</li>
+			<li><span><i class="fa fa-trash"></i></span> Solve a mystery</li>
+			<li><span><i class="fa fa-trash"></i></span> Kill voldomode</li>
+		</ul>
+	</div>
+<script type="text/javascript">
+	$("ul").on("click","li",function(){
+		$(this).toggleClass("completed");		
+	});
+	$("ul").on("click","span",function(event){
+		$(this).parent().fadeOut(500,function(){
+			$(this).remove();
+		});
+		event.stopPropagation();		
+	});
+	$("input[type='text']").on("keypress",function(event){
+		if(event.which===13){
+			var todotext=$(this).val();
+			$(this).val("");
+			$("ul").append("<li><span><i class='fa fa-trash'></i></span> "+todotext+"</li>");
+		}
+	});
+	$(".fa-plus").on("click",function(){
+		$("input[type='text']").fadeToggle(300);
+	});
+</script>
+</body>
+</html>
