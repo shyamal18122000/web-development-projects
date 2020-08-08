@@ -26,4 +26,10 @@ After finishing the project it looks like the image inside the folder with name 
 
 It contain a code file in which html, css and javascript is used to make the web page.I have used a predefined bootstrap.css file to make it easy to make.
 
-After finishing the project it looks like the images inside the folder based on different screens.
+After finishing the project it looks like the images inside the folder based on different screens size.
+
+### 5. todo list:-
+
+It contain a code file in which html, css and javascript is used to make the web page.I have used a predefined bootstrap.css, bootstrap.js, jquery-3.5.1.js and font-awesome.css to make it.
+
+After finishing the project it looks like the images inside the folder based on your wish.
