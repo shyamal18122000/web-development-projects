@@ -8,7 +8,7 @@ It contain a code file in which html, css and javascript is used to make the web
 
 After finishing the project it looks like the image inside the folder with name img.png
 
-### 1. patatap clone project:-
+### 2. patatap clone project:-
 
 It contain a code file in which html, css and javascript is used to make the web page.I have used two libraries or modules in javascript that is paper-full.js and howler.js to form patatap clone.
 
