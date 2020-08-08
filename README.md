@@ -14,13 +14,14 @@ It contain a code file in which html, css and javascript is used to make the web
 
 After finishing the project it looks like the image inside the folder with name img.png and when you press some key than it looks like img_key_press.png
 
-### 3.image gallery with grid:-
+### 3.image gallery without grid:-
 
 It contain a code file in which html, css and javascript is used to make the web page.
 
 After finishing the project it looks like the image inside the folder with name img.png.
 
 **Note :- The difference between image gallery with grid and image gallery without grid is that with change in the screen size the number of rows changes in image gallery with grid and in image gallery without grid the number of rows does not change**
+
 ### 4. image gallery with grid:-
 
 It contain a code file in which html, css and javascript is used to make the web page.I have used a predefined bootstrap.css file to make it easy to make.
